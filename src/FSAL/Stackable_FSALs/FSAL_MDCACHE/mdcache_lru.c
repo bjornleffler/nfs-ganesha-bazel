@@ -59,7 +59,7 @@
 #include "gsh_intrinsic.h"
 #include "sal_functions.h"
 #include "nfs_exports.h"
-#include "sys_resource.h"
+#include "os/sys_resource.h"
 
 #include "gsh_lttng/gsh_lttng.h"
 #if defined(USE_LTTNG) && !defined(LTTNG_PARSING)

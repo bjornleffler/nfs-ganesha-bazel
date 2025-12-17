@@ -70,7 +70,7 @@
 #include "idmapper.h"
 #include "pnfs_utils.h"
 #include "atomic_utils.h"
-#include "sys_resource.h"
+#include "os/sys_resource.h"
 #ifdef USE_DBUS
 #include "gsh_dbus.h"
 #endif
