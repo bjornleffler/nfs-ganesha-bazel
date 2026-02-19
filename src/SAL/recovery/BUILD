@@ -3,12 +3,12 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 package(default_visibility = ["//visibility:public"])
 
 cc_library(
-    name = "FSAL_UP",
+    name = "recovery",
     srcs = [
-        "fsal_up_async.c",
-        "fsal_up_top.c",
+        "recovery_fs.c",
+        "recovery_fs_ng.c",
     ],
-    hdrs = [],
+    hdrs = ["recovery_fs.h"],
     strip_include_prefix = "//nfs-ganesha/src",
     deps = [
         "//nfs-ganesha/src/bazel",
