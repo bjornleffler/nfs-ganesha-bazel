@@ -12,6 +12,7 @@ cc_library(
         "nfs4_recovery.c",
         "nfs4_state.c",
         "nfs4_state_id.c",
+        "sal_metrics.c",
         "state_async.c",
         "state_deleg.c",
         "state_layout.c",

@@ -8,6 +8,7 @@ cc_library(
     hdrs = glob(["*h"]),
     strip_include_prefix = "//nfs-ganesha/src/include",
     deps = [
+        "//nfs-ganesha/src/monitoring:includes",
         "//nfs-ganesha/src/include/os",
         "//nfs-ganesha/src/include/os/linux",
     ],

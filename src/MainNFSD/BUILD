@@ -67,6 +67,7 @@ cc_library(
 
 cc_shared_library(
     name = "libnfsd",
+    exports_filter = ["//ntirpc/src/monitoring:__pkg__"],
     shared_lib_name = "libnfsd.so",
     deps = [":main_services"],
 )

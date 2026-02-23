@@ -11,6 +11,7 @@ cc_library(
         "export_mgr.c",
         "exports.c",
         "fridgethr.c",
+        "ip_utils.c",
         "nfs4_acls.c",
         "nfs4_fs_locations.c",
         "nfs_convert.c",

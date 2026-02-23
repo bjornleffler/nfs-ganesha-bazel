@@ -4,10 +4,10 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "monitoring",
-    srcs = glob([
-        "monitoring.cc",
-        "exposer.cc",
-    ]),
+    srcs = [
+        "dynamic_metrics.cc",
+        "prometheus_exposer.cc",
+    ],
     hdrs = [],
     defines = [
         # Lock down NFS standalone server to localhost only.
@@ -18,7 +18,8 @@ cc_library(
         ":includes",
         "//nfs-ganesha/src/bazel",
         "//nfs-ganesha/src/include",
-        # "//nfs-ganesha/src/monitoring/prometheus-cpp-lite/core/include/prometheus",
+        "//ntirpc/src/monitoring",
+        "//prometheus-cpp-lite/core",
     ],
 )
 
@@ -28,5 +29,7 @@ cc_library(
     hdrs = glob(["include/*.h"]),
     strip_include_prefix = "//nfs-ganesha/src/monitoring/include",
     visibility = ["//visibility:public"],
-    deps = [],
+    deps = [
+        "//prometheus-cpp-lite/core",
+    ],
 )
