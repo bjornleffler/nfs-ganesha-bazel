@@ -18,11 +18,7 @@ cc_library(
         "nfs_worker_thread.c",
     ],
     hdrs = [],
-    copts = [
-        # Bjorn fixed paths. This one is outside the toolchain.
-        # /usr/lib/aarch64-linux-gnu/dbus-1.0/include"
-        "-I /usr/include/dbus-1.0",
-    ],
+    copts = [],
     defines = [
         # Lock down NFS standalone server to localhost only.
         "BFS_LOCKDOWN_LOCALHOST=1",

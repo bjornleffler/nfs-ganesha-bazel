@@ -6,14 +6,10 @@ cc_library(
     name = "dbus",
     srcs = glob(["*.c"]),
     hdrs = glob(["*.h"]),
-    copts = [
-        # Bjorn fixed paths. This one is outside the toolchain.
-        # "-I /usr/include/dbus-1.0",
-        # "-I /usr/lib/aarch64-linux-gnu/dbus-1.0/include",
-    ],
-    linkopts = ["-ldbus-1"],
+    copts = [],
     strip_include_prefix = "//nfs-ganesha/src",
     deps = [
+        "//dbus/dbus",
         "//nfs-ganesha/src/bazel",
         "//nfs-ganesha/src/include",
         "//nfs-ganesha/src/include/FSAL",

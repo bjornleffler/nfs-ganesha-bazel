@@ -16,11 +16,7 @@ cc_library(
         "fsal_manager.c",
     ],
     hdrs = [],
-    copts = [
-        # Bjorn fixed paths. This one is outside the toolchain.
-        # /usr/lib/aarch64-linux-gnu/dbus-1.0/include"
-        "-I /usr/include/dbus-1.0",
-    ],
+    copts = [],
     strip_include_prefix = "//nfs-ganesha/src",
     deps = [
         ":localfs",
@@ -53,11 +49,7 @@ cc_library(
         "localfs.c",
     ],
     hdrs = [],
-    copts = [
-        # Bjorn fixed paths. This one is outside the toolchain.
-        # /usr/lib/aarch64-linux-gnu/dbus-1.0/include"
-        "-I /usr/include/dbus-1.0",
-    ],
+    copts = [],
     linkopts = [
         "-lblkid",
         "-luuid",
